@@ -49,9 +49,6 @@ The following packages are necessary to run the scripts (cf. the "how to use" se
 The can be installed by using the requirements.txt file by using the command `pip install -r requirements.txt`
 
 
-ort datetime# How To Use It
- All code is in the Notebook [*Predicting_Car_Prices.ipynb*](https://github.com/chrisk2b/Predicting-Car-Prices/blob/master/notebooks/Predicting_Car_Prices.ipynb).  Please assure that all dependencies which are mentioned in the section Packages have been installed. There is a requirements.txt file in the Repository which contains all relevant dependencies. You can install all dependencies from that file using pip via the command: _pip install -r requirements.txt_
- Further, the business questions as well as their answers are contained in *Predicting_Car_Prices.ipynb* in markdown cells. 
 # How to use the Repository
 
  1. open a terminal an execute `python create_tables.py`. This will create the postgres database and all relevant tables. The database is available under localhost and port  5432. Please node that a database with the name studentdb must already be running under localhost.
