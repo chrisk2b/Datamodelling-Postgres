@@ -12,7 +12,7 @@ songplay_table_create = """
 create table songplays (
   songplay_id serial primary key,
   starttime timestamp,
-  user_id int,
+  user_id int not null,
   level varchar,
   song_id varchar,
   artist_id varchar,
@@ -25,8 +25,8 @@ create table songplays (
 user_table_create = """
 create table users (
   user_id int primary key,
-  first_name varchar,
-  last_name varchar,
+  first_name varchar not null,
+  last_name varchar not null,
   gender varchar,
   level varchar
   );
@@ -35,7 +35,7 @@ create table users (
 song_table_create = """
 create table songs (
   song_id varchar primary key,
-  title varchar,
+  title varchar not null,
   artist_id varchar,
   year int,
   duration numeric
@@ -45,7 +45,7 @@ create table songs (
 artist_table_create = """
 create table artists (
   artist_id varchar primary key,
-  name varchar,
+  name varchar not null,
   location varchar,
   latitude numeric,
   longitude numeric
@@ -88,7 +88,7 @@ INSERT INTO users (
     level)
 VALUES (%s,%s,%s,%s,%s)
 ON CONFLICT (user_id)
-DO NOTHING
+DO UPDATE SET level = EXCLUDED.level
 """
 
 song_table_insert = """
