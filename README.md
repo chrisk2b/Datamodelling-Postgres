@@ -13,7 +13,8 @@ The Datamodel is based on a Star Schema an consist of the following tables:
  - **Dimension Tables**:
 	 1.  **users** - users of Sparkify
 	 ![users dimension table](https://github.com/chrisk2b/Datamodelling-Postgres/blob/master/images/users.PNG)
-    -   _user_id, first_name, last_name, gender, level_
+	 
+ 
       2.  **songs** - songs in music database
     -   _song_id, title, artist_id, year, duration_
    3. **artists** - artists in music database
