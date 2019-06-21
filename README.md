@@ -30,6 +30,7 @@ The following files/folders are contained in the repository:
  - [sql_queries.py](https://github.com/chrisk2b/Datamodelling-Postgres/blob/master/sql_queries.py): This python file contains all CREATE TABLE statements to create the fact and dimension tables as well as (parametrized) INSER statements which are used during the loading process. These statements are imported and used in the files below.
  - [create_tables.py](https://github.com/chrisk2b/Datamodelling-Postgres/blob/master/create_tables.py): The create_tables.py  creates and connects to the postgres database (which is called sparkifydb), drops already existing tables and create all fact and dimension tables which. The statements defined in sql_queries.py are used for this task. The [etl.py](https://github.com/chrisk2b/Datamodelling-Postgres/blob/master/etl.py) script (see below), polulates these tables with data.
  - [etl.py:](https://github.com/chrisk2b/Datamodelling-Postgres/blob/master/etl.py) This file implemets the ETL process, i.e. extraction of the data from the raw JSON files, the transformation into the start schema and the loading into the tables created with the create_tables.py script.
+  - [etl.ipynb](https://github.com/chrisk2b/Datamodelling-Postgres/blob/master/etl.ipynb): This is a notebook which implements the ETL process in a prototypical way for just a sing long and song file. 
  - [data:](https://github.com/chrisk2b/Datamodelling-Postgres/tree/master/data) This folder contains sample data for testing purposes. It consists of two sub-folders for log data and song data.
  - [requirements.txt](https://github.com/chrisk2b/Datamodelling-Postgres/blob/master/requirements.txt): Contains all dependencies, cf. below.
  - [test.ipnb:](https://github.com/chrisk2b/Datamodelling-Postgres/blob/master/test.ipynb) A notebook which is used for testing how the database is populated.
@@ -49,9 +50,6 @@ The following packages are necessary to run the scripts (cf. the "how to use" se
 The can be installed by using the requirements.txt file by using the command `pip install -r requirements.txt`
 
 
-ort datetime# How To Use It
- All code is in the Notebook [*Predicting_Car_Prices.ipynb*](https://github.com/chrisk2b/Predicting-Car-Prices/blob/master/notebooks/Predicting_Car_Prices.ipynb).  Please assure that all dependencies which are mentioned in the section Packages have been installed. There is a requirements.txt file in the Repository which contains all relevant dependencies. You can install all dependencies from that file using pip via the command: _pip install -r requirements.txt_
- Further, the business questions as well as their answers are contained in *Predicting_Car_Prices.ipynb* in markdown cells. 
 # How to use the Repository
 
  1. open a terminal an execute `python create_tables.py`. This will create the postgres database and all relevant tables. The database is available under localhost and port  5432. Please node that a database with the name studentdb must already be running under localhost.
