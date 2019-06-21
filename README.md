@@ -16,16 +16,24 @@ The Datamodel is based on a Star Schema an consist of the following tables:
 	 ![users dimension table](https://github.com/chrisk2b/Datamodelling-Postgres/blob/master/images/users.PNG)
 	 
  
-      2.  **songs** - songs in music database
-    -   _song_id, title, artist_id, year, duration_
-   3. **artists** - artists in music database
-    -   _artist_id, name, location, latitude, longitude_
+      2.  **songs** - all available songs
+      
+      ![users dimension table](https://github.com/chrisk2b/Datamodelling-Postgres/blob/master/images/songs.PNG)
+      
+
+   3. **artists** - all artists related to songs
+   
+   ![users dimension table](https://github.com/chrisk2b/Datamodelling-Postgres/blob/master/images/artists.PNG)
+   
+
    5.  **time** - timestamps of records in **songplays** (cf. fact tables below) broken down into specific units
-    -   _start_time, hour, day, week, month, year, weekday_
+   
+   ![users dimension table](https://github.com/chrisk2b/Datamodelling-Postgres/blob/master/images/time.PNG)
+
  - **Fact Tables**:
     1.  **songplays** - records in log data associated with song plays 
 
-	-   _songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent_
+    ![users dimension table](https://github.com/chrisk2b/Datamodelling-Postgres/blob/master/images/songplays.PNG)
 
 # Files in the Repositoty
 The following files/folders are contained in the repository:
